@@ -1,0 +1,161 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: hsl(210, 46%, 95%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+h2{
+  margin: 20px 0 30px;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.main-container{
+  height: 100%;
+  padding: 7% 10%;
+}
+
+.grid-container{
+  display: grid;
+  grid-gap: 25px;
+  grid-template-areas:
+    'item1 item1 item1 item1 item1 item2 item2 item3'
+    'item4 item4 item5 item5 item5 item5 item5 item3';
+    width: auto;
+}
+
+.grid-item{
+  padding: 25px 30px;
+  text-align: left;
+  border-radius: 10px;
+  z-index: +1;
+}
+
+/* GRID ELEMENTS */
+
+#item1{
+  grid-area: item1;
+  background-color: hsl(263, 55%, 52%);
+  color: white;
+  border-radius: 10px;
+  z-index: -1;
+  text-align: right;
+}
+
+#item2{
+  grid-area: item2;
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+}
+
+#item3{
+  grid-area: item3;
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+}
+
+#item4{
+  grid-area: item4;
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+}
+
+#item5{
+  grid-area: item5;
+  background-color: hsl(219, 29%, 14%);
+  color: white;
+}
+
+/* ITEMS IN GRID */
+
+.profile-img{
+  width: 30px;
+  border-radius: 15px;
+  margin-right: 15px;
+  float: left;
+}
+
+.profile-img.border-clr1{
+  border-radius: 17px;
+  border: 2px solid #A775F1;
+}
+
+.profile-img.border-clr2{
+  border-radius: 17px;
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+.name{
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.desigination{
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.bg-quote{
+  position: absolute;
+  height: 130px;
+  width: 127.5px;
+  z-index: -1;
+  left: 30%;
+}
+
+.text{
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (min-width:428px) and (max-width:1112px) {
+
+  .grid-container{
+    grid-template-areas:
+      'item1 item1 item2'
+      'item3 item3 item3'
+      'item4 item5 item5';
+  }
+
+  .main-container{
+    padding: 15% 10%;
+  }
+
+}
+
+@media only screen and (min-width:428px) and (max-width:640px) {
+
+  .bg-quote{
+    left:15%;
+  }
+
+}
+
+@media only screen and (min-width:320px) and (max-width:428px) {
+
+  .main-container{
+    padding: 20% 10%;
+  }
+
+  .grid-container{
+    grid-template-areas:
+      'item1'
+      'item2'
+      'item4'
+      'item5'
+      'item3';
+  }
+
+  .bg-quote{
+    left: 140px;
+  }
+
+}
